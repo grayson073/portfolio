@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Domine|Open+Sans');
+@import url('https://use.fontawesome.com/releases/v5.3.1/css/all.css');
+
 $primary-color: #373535;
 $secondary-color: rgb(242, 243, 244);
 $nav-background-color: white;
@@ -221,11 +224,11 @@ main {
     header {
     
         #sideNav {
-    
+            width: 120px;
             a, span {
-                font-size: 20px;
-                padding: 5px 0px 6px 20px;
-                margin: 0px 10px 0px 0px;
+                font-size: 14px;
+                padding: 0px 0px 6px 20px;
+                margin: 0px 0px 0px 0px;
                 text-decoration: none;
                 color: $primary-color;
             }
@@ -233,15 +236,15 @@ main {
     }
     
     .openNavButton {
-        right: 20px;
+        right: 14px;
         padding-top: 20px;
-        font-size: 20px;
+        font-size: 18px;
     }
     
     .closeNavButton {
-        left: -12px;
-        bottom: 2px;
-        font-size: 20px;
+        right: 55px;
+        top: 5px;
+        font-size: 16px;
     }
     
     main {
@@ -318,7 +321,7 @@ main {
             flex-flow: column wrap;
     
             h1, h2 {
-                font-size: 20px;
+                font-size: 18px;
             }
         }
         .middleSection {
@@ -337,7 +340,8 @@ main {
                         }
 
                         textarea {
-                            width: 120px;
+                            width: 175px;
+                            height: 100px;
                         }
                     }
                 }

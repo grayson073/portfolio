@@ -1,15 +1,28 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React, { PureComponent } from 'react';
+import styles from '../scss/index.scss';
+import Helmet from 'react-helmet';
+import Header from '../components/Header';
+import Home from '../components/Home';
 
-import Layout from '../components/layout'
+export default class index extends PureComponent {
 
-const IndexPage = () => (
-  <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
 
-export default IndexPage
+  render() {
+    <Helmet>
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+      <meta name="description" content="" />
+      <meta name="geo.region" content="US-OR" />
+      <meta name="geo.placename" content="Portland" />
+      <title>Kevin Grayson: Full Stack Developer</title>
+    </Helmet>;
+
+    return (
+      <div className={styles}>
+        <Header/>
+        <Home/>        
+      </div>
+    );
+  }
+}

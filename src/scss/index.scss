@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css?family=Domine|Open+Sans');
+@import url('https://use.fontawesome.com/releases/v5.3.1/css/all.css');
+
+$primary-color: #373535;
+$secondary-color: rgb(242, 243, 244);
+$nav-background-color: white;
+$header-font-family: 'Domine', serif;
+$body-font-family: 'Open Sans', sans-serif;
+
+body {
+    background-color: $primary-color;
+    color: $secondary-color;
+    font-family: $body-font-family;
+    font-size: 16px;
+    margin: 0px;
+}
+
+header {
+
+    #sideNav {
+        background-color: $nav-background-color;
+        display: none;
+        flex-flow: column nowrap;
+        width: auto;
+        height: 100vh;
+        position: fixed;
+        z-index: 1;
+        top: 0px;
+        right: 0px;
+        overflow-x: hidden;
+        padding-top: 15px;
+
+        a, span {
+            font-size: 24px;
+            padding: 5px 0px 6px 20px;
+            margin: 0px 20px 0px 0px;
+            text-decoration: none;
+            color: $primary-color;
+        }
+        
+        a:hover {
+            color: rgb(92, 20, 20);
+        }
+        a:visited{
+            color: $primary-color;
+        }
+        a:active{
+            color: rgb(154, 154, 154)
+        }
+    }
+}
+
+.openNavButton {
+    position: fixed;
+    right: 20px;
+    padding-top: 20px;
+    font-size: 24px;
+}
+
+.closeNavButton {
+    position: relative;
+    padding-left: 128px;
+    font-size: 24px;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    section {
+        border: 2px solid white;
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    .topSection {
+        align-items: center;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        object-fit: cover;
+
+        h1, h2 {
+            font-family: $header-font-family;
+            font-size: 50px;
+        }
+
+        img {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            opacity: 0.3;
+            z-index: -5;
+            object-fit: cover;
+        }
+    }
+    .middleSection {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            opacity: 0.3;
+            z-index: -5;
+            object-fit: cover;
+        }
+    }
+    .bottomSection {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            opacity: 0.3;
+            z-index: -5;
+            object-fit: cover;
+        }
+        
+        form {
+            width: auto;
+            fieldset {
+                padding-top: 20px;
+                div {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    padding: 10px 5px 5px 5px;
+
+                    label {
+                        width: 80px;
+                    }
+                }
+
+                button {
+                    background-color: white;
+                }
+            }
+        }
+    }
+}
+
+.labelsAndInputs {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+
+// ************************************
+// *      START OF MEDIA QUERIES      *
+// ************************************
+
+@media only screen and (min-device-width : 460px) and (max-device-width : 675px) {
+    
+    header {
+    
+        #sideNav {
+    
+            a, span {
+                font-size: 20px;
+                padding: 5px 0px 6px 20px;
+                margin: 0px 10px 0px 0px;
+                text-decoration: none;
+                color: $primary-color;
+            }
+        }
+    }
+    
+    .openNavButton {
+        right: 20px;
+        padding-top: 20px;
+        font-size: 20px;
+    }
+    
+    .closeNavButton {
+        left: -12px;
+        bottom: 2px;
+        font-size: 20px;
+    }
+    
+    main {
+        
+        .topSection {
+            flex-flow: column nowrap;
+    
+            h1, h2 {
+                font-size: 30px;
+            }
+        }
+        .middleSection {
+            flex-flow: row nowrap;
+        }
+        .bottomSection {
+            flex-flow: row nowrap;
+            
+            form {
+                width: auto;
+                fieldset {
+                    padding-top: 20px;
+                    div {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        align-items: center;
+                        padding: 10px 5px 5px 5px;
+    
+                        label {
+                            width: 80px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 459px) {
+    
+    header {
+    
+        #sideNav {
+            width: 120px;
+            a, span {
+                font-size: 14px;
+                padding: 0px 0px 6px 20px;
+                margin: 0px 0px 0px 0px;
+                text-decoration: none;
+                color: $primary-color;
+            }
+        }
+    }
+    
+    .openNavButton {
+        right: 14px;
+        padding-top: 20px;
+        font-size: 18px;
+    }
+    
+    .closeNavButton {
+        right: 55px;
+        top: 5px;
+        font-size: 16px;
+    }
+    
+    main {
+        flex-flow: column nowrap;
+        
+        .topSection {
+            flex-flow: column nowrap;
+    
+            h1, h2 {
+                font-size: 23px;
+            }
+        }
+        .middleSection {
+            flex-flow: row nowrap;
+        }
+        .bottomSection {
+            flex-flow: row nowrap;
+            
+            form {
+                width: auto;
+                fieldset {
+                    padding-top: 20px;
+                    div {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        align-items: center;
+                        padding: 5px 5px 5px 5px;
+    
+                        label {
+                            width: 80px;
+                        }
+
+                        textarea {
+                            width: 190px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width : 100px) and (max-device-width : 320px) {
+    
+    header {
+    
+        #sideNav {
+            width: 120px;
+            a, span {
+                font-size: 14px;
+                padding: 0px 0px 6px 20px;
+                margin: 0px 0px 0px 0px;
+                text-decoration: none;
+                color: $primary-color;
+            }
+        }
+    }
+    
+    .openNavButton {
+        right: 14px;
+        padding-top: 20px;
+        font-size: 18px;
+    }
+    
+    .closeNavButton {
+        right: 55px;
+        top: 5px;
+        font-size: 16px;
+    }
+    
+    main {
+        
+        .topSection {
+            flex-flow: column wrap;
+    
+            h1, h2 {
+                font-size: 18px;
+            }
+        }
+        .middleSection {
+            flex-flow: column wrap;
+        }
+        .bottomSection {
+            
+            form {
+                width: auto;
+                fieldset {
+                    div {
+                        flex-flow: column wrap;
+                        padding: 0px 50px 0px 0px
+                        label {
+                            width: 30px;
+                        }
+
+                        textarea {
+                            width: 175px;
+                            height: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-
+/* eslint-disable-next-line */
 const Header = ({ siteTitle }) => (
   <div
     style={{

@@ -1,14 +1,18 @@
 require('dotenv').config();
+/* eslint-disable-next-line */
 const SPACE_ID = process.env.SPACE_ID;
+/* eslint-disable-next-line */
 const DELIVERY_API_KEY = process.env.DELIVERY_API_KEY;
 // const PREVIEW_API_KEY = process.env.PREVIEW_API_KEY;
 
+/* eslint-disable-next-line */
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Default Starter',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-plugin-eslint',
       options: {

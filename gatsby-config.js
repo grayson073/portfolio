@@ -21,7 +21,7 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'gatsby-starter-default',
         short_name: 'starter',
@@ -34,21 +34,20 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     {
-      resolve: `gatsby-source-contentful`,
+      resolve: 'gatsby-source-contentful',
       options: {
         spaceId: SPACE_ID,
         accessToken: DELIVERY_API_KEY,
       },
     },
     // For PREVIEW API (includes contentful drafts)
-      // {
-      //   resolve: `gatsby-source-contentful`,
-      //   options: {
-      //     spaceId: SPACE_ID,
-      //     accessToken: PREVIEW_API_KEY,
-      //     host: `preview.contentful.com`,
-      //   },
-      // },
-    `gatsby-plugin-sass`
+    // {
+    //   resolve: `gatsby-source-contentful`,
+    //   options: {
+    //     spaceId: SPACE_ID,
+    //     accessToken: PREVIEW_API_KEY,
+    //     host: `preview.contentful.com`,
+    //   },
+    // },
   ],
-}
+};

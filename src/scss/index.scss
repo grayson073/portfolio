@@ -7,19 +7,31 @@ $nav-background-color: white;
 $header-font-family: 'Domine', serif;
 $body-font-family: 'Open Sans', sans-serif;
 
+html {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 body {
     background-color: $primary-color;
     color: $secondary-color;
     font-family: $body-font-family;
     font-size: 16px;
     margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
 }
 
 header {
-
+    
     #sideNav {
         background-color: $nav-background-color;
-        display: none;
+        display: flex;
         flex-flow: column nowrap;
         width: auto;
         height: 100vh;
@@ -29,6 +41,7 @@ header {
         right: 0px;
         overflow-x: hidden;
         padding-top: 15px;
+        transition: all .3s ease .15s;
 
         a, span {
             font-size: 24px;
@@ -36,6 +49,7 @@ header {
             margin: 0px 20px 0px 0px;
             text-decoration: none;
             color: $primary-color;
+            cursor: pointer;
         }
         
         a:hover {
@@ -72,7 +86,7 @@ main {
         width: 100vw;
     }
     
-    .topSection {
+    .landing-section {
         align-items: center;
         display: flex;
         flex-flow: column nowrap;
@@ -93,11 +107,12 @@ main {
             object-fit: cover;
         }
     }
-    .middleSection {
+    .about-section {
+        align-items: center;
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
-        align-items: center;
+        object-fit: cover;
 
         img {
             position: absolute;
@@ -108,11 +123,12 @@ main {
             object-fit: cover;
         }
     }
-    .bottomSection {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
+    .contact-section {
         align-items: center;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        object-fit: cover;
 
         img {
             position: absolute;
@@ -124,12 +140,11 @@ main {
         }
         
         form {
-            width: auto;
             fieldset {
                 padding-top: 20px;
                 div {
                     display: flex;
-                    flex-flow: row nowrap;
+                    flex-flow: row wrap;
                     align-items: center;
                     padding: 10px 5px 5px 5px;
 
@@ -186,17 +201,17 @@ main {
     
     main {
         
-        .topSection {
+        .landing-section {
             flex-flow: column nowrap;
     
             h1, h2 {
                 font-size: 30px;
             }
         }
-        .middleSection {
+        .about-section {
             flex-flow: row nowrap;
         }
-        .bottomSection {
+        .contact-section {
             flex-flow: row nowrap;
             
             form {
@@ -250,17 +265,17 @@ main {
     main {
         flex-flow: column nowrap;
         
-        .topSection {
+        .landing-section {
             flex-flow: column nowrap;
     
             h1, h2 {
                 font-size: 23px;
             }
         }
-        .middleSection {
+        .about-section {
             flex-flow: row nowrap;
         }
-        .bottomSection {
+        .contact-section {
             flex-flow: row nowrap;
             
             form {
@@ -317,17 +332,17 @@ main {
     
     main {
         
-        .topSection {
+        .landing-section {
             flex-flow: column wrap;
     
             h1, h2 {
                 font-size: 18px;
             }
         }
-        .middleSection {
+        .about-section {
             flex-flow: column wrap;
         }
-        .bottomSection {
+        .contact-section {
             
             form {
                 width: auto;

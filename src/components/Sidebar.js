@@ -65,7 +65,7 @@ render() {
             </a>      
           </li>
           <li onClick={() => (this.handleScroll('.contact-section'))} className="has-subnav">
-            <a>
+            <a name="contact">
               <i className="fas fa-envelope fa-2x"></i>
               <span className="nav-text">
                             Contact
@@ -74,7 +74,7 @@ render() {
           </li>
         </ul>
 
-        <ul className="logout">
+        <ul className="topOfPage">
           <li onClick={() => (this.handleScroll('.landing-section'))} >
             <a>
               <i className="fas fa-arrow-up fa-2x"></i>

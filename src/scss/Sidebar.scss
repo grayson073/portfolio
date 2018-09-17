@@ -16,6 +16,9 @@
   font-size:20px;
   }
 
+  .has-subnav {
+    cursor: pointer;
+  }
 
   .main-menu:hover,nav.main-menu.expanded {
   width:170px;
@@ -85,10 +88,11 @@
     font-family: 'Titillium Web', sans-serif;
   }
 
-  .main-menu>ul.logout {
+  .main-menu>ul.topOfPage {
   position:absolute;
   left:0;
   bottom:0;
+  cursor: pointer;
   }
 
   .no-touch

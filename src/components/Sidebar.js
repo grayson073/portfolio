@@ -20,7 +20,7 @@ render() {
             <a href="/">
               <i className="fas fa-home fa-2x"></i>
               <span className="nav-text">
-                            Home
+              Home
               </span>
             </a>
           </li>
@@ -28,7 +28,7 @@ render() {
             <a>
               <i className="fas fa-info-circle fa-2x"></i>
               <span className="nav-text">
-                            About
+              About
               </span>
             </a>
           </li>
@@ -36,7 +36,7 @@ render() {
             <a href="/photography">
               <i className="fas fa-camera-retro fa-2x"></i>
               <span className="nav-text">
-                            Photography
+              Photography
               </span>
             </a>      
           </li>
@@ -44,7 +44,7 @@ render() {
             <a href="#">
               <i className="fas fa-boxes fa-2x"></i>
               <span className="nav-text">
-                            Projects
+              Projects
               </span>
             </a>      
           </li>
@@ -52,7 +52,7 @@ render() {
             <a target="_blank" rel="noopener noreferrer" href="https://github.com/grayson073">
               <i className="fab fa-github fa-2x"></i>
               <span className="nav-text">
-                            GitHub
+              GitHub
               </span>
             </a>      
           </li>
@@ -68,7 +68,7 @@ render() {
             <a name="contact">
               <i className="fas fa-envelope fa-2x"></i>
               <span className="nav-text">
-                            Contact
+              Contact
               </span>
             </a>      
           </li>
@@ -79,7 +79,7 @@ render() {
             <a>
               <i className="fas fa-arrow-up fa-2x"></i>
               <span className="nav-text">
-                            Top Of Page
+              Top
               </span>
             </a>
           </li>  

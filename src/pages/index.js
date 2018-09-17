@@ -1,13 +1,20 @@
 import React, { PureComponent } from 'react';
-import styles from '../scss/index.scss';
 import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import styles from '../scss/index.scss';
 import Sidebar from '../components/Sidebar';
 import Home from '../components/Home';
 
 export default class index extends PureComponent {
 
+  static propTypes = {
+    data: PropTypes.object,
+  };
 
   render() {
+    const biography = this.props.data.allContentfulBio.edges[0].node.biography.biography;
+
     <Helmet>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,8 +28,22 @@ export default class index extends PureComponent {
     return (
       <div className={styles}>
         <Sidebar/>
-        <Home/>        
+        <Home biography={biography}/>        
       </div>
     );
   }
 }
+
+export const query = graphql`
+  query AboutQuery {
+    allContentfulBio {
+      edges {
+        node {
+          biography {
+            biography
+          }
+        }
+      }
+    }
+  }
+`;

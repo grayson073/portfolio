@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import styles from '../scss/index.scss';
 import Helmet from 'react-helmet';
-import Header from '../components/Header';
+import Sidebar from '../components/Sidebar';
 import Home from '../components/Home';
 
 export default class index extends PureComponent {
@@ -20,7 +20,7 @@ export default class index extends PureComponent {
 
     return (
       <div className={styles}>
-        <Header/>
+        <Sidebar/>
         <Home/>        
       </div>
     );

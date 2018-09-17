@@ -1,11 +1,12 @@
-import React from 'react';
-import Layout from '../components/layout';
+import React, { PureComponent } from 'react';
 
-const NotFoundPage = () => (
-  <Layout>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-);
+export default class error404component extends PureComponent {
 
-export default NotFoundPage;
+  render() {
+    return (
+      <div>
+        <h1>404!</h1>
+      </div>
+    );
+  }
+}
